@@ -21,7 +21,6 @@
     ],
     "dependencies": {
 
-
     },
     "dependenciesxxxx": {
         "angular": "^1.5.8",
@@ -41,7 +40,7 @@
         "angular": "^1.5.8",
         "angular-ui-router": "^0.3.1",
         "angular-material": "^1.1.1",
-        "angular-material-icons": "^0.7.1"
-
+        "angular-material-icons": "^0.7.1",
+        "angular-material-pagination": "https://github.com/practian-reapps/angular-material-pagination.git"
     }
 }
