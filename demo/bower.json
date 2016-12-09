@@ -1,0 +1,47 @@
+{
+    "name": "web",
+    "homepage": "index.html",
+    "authors": [
+        "asullom"
+    ],
+    "description": "web app",
+    "main": "index.html",
+    "keywords": [
+        "angular",
+        "material"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+
+
+    },
+    "dependenciesxxxx": {
+        "angular": "^1.5.8",
+        "angular-ui-router": "^0.3.1",
+        "angular-material": "^1.1.1",
+        "angular-material-icons": "^0.7.1",
+        "angular-sanitize": "^1.5.8",
+        "angular-resource": "^1.5.8",
+        "angular-toastr": "^2.1.1",
+        "moment": "^2.15.2",
+        "angular-translate": "^2.13.0",
+        "angular-dynamic-locale": "^0.1.32",
+        "angular-i18n": "^1.5.9",
+        "angular-oauth2-frontend": "https://github.com/practian-reapps/angular-oauth2-frontend.git"
+    },
+    "devDependencies": {
+        "angular": "^1.5.8",
+        "angular-ui-router": "^0.3.1",
+        "angular-material": "^1.1.1",
+        "angular-material-icons": "^0.7.1"
+
+    }
+}

@@ -1,0 +1,70 @@
+<div layout="column" class="app" ng-cloak md-theme="{{ dynamicTheme }}">
+    <section layout="row" flex>
+        <div layout="column" tabIndex="-1" role="main" flex>
+            <md-toolbar class="md-whiteframe-glow-z1 md-hue-2">
+                <div class="md-toolbar-tools">
+                    <div>
+                        <a ui-sref="home">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+              width: 24px; height: 24px;">
+                                <path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
+                                <path d="M 8 80 L 50 0 L 50 100 Z" fill="#f3f3f3"></path>
+                            </svg>
+                        </a>
+                        <span class="hidden-folded m-l inline" ng-bind="app.name"></span>
+                    </div> &nbsp;&nbsp;
+                    <h2 class="md-toolbar-item md-breadcrumb md-headline">
+              <span ng-if="$state.current.data.section">
+              <span hide-xs  ng-bind="$state.current.data.section"></span>
+              <span  ng-if="$state.current.data.section" class="docs-menu-separator-icon" hide-xs  style="transform: translate3d(0, 1px, 0)">
+                <span class="md-visually-hidden">-</span>
+                <md-icon 
+                aria-hidden="true"
+                md-svg-src="md-toggle-arrow" 
+                style="transform: rotate(90deg); 
+                -webkit-transform: rotate(90deg);"></md-icon>
+
+              </span>
+              </span>
+              <span class="md-breadcrumb-page" ng-bind="$state.current.data.page"></span>
+              </h2>
+                    <span flex></span>
+
+
+                    <a ui-sref="home.dashboard">Dashboard</a>&nbsp;|&nbsp;
+                    <a ui-sref="home.autores">autores</a>&nbsp;
+
+                    <md-icon 
+                aria-hidden="true"
+                md-svg-src="md-toggle-arrow" 
+                style="transform: rotate(-90deg); 
+                -webkit-transform: rotate(-90deg);"></md-icon>
+
+                    <h1 ng-show="userService.userName">{{userService.userName}}</h1>
+                    <md-icon 
+                aria-hidden="true"
+                md-svg-src="md-toggle-arrow" 
+                style="transform: rotate(90deg); 
+                -webkit-transform: rotate(90deg);"></md-icon>
+
+                    
+                </div>
+            </md-toolbar>
+            <md-content md-scroll-y layout="column" flex>
+                <div ui-view flex="noshrink"></div>
+                <div flex></div>
+                <any md-ink-ripple="#FF0000">
+                    <div>
+                        Ripples in red
+                        
+                        <md-button class="md-primary" ng-click="setTheme('default')">Default</md-button>
+                        <md-button class="md-primary md-hue-1" ng-click="setTheme('altTheme')">altTheme</md-button>
+                        <md-button class="md-accent md-hue-1" ng-click="setTheme('docs-dark')">docs-dark</md-button>
+                        <md-button class="md-accent md-hue-2" ng-click="setTheme('panelTheme')">panelTheme</md-button>
+                    </div>
+                </any>
+            </md-content>
+        </div>
+
+    </section>
+</div>

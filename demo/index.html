@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-pe" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="$state.current.data.section + ($state.current.data.section === Null ? '' : ' > ') +
+        $state.current.data.page">
+    </title>
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="dist/angular-material-pagination.css" type="text/css" />
+    <style type="text/css">
+    .app {
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="app" ui-view ng-controller="MainCtrl"></div>
+    <!-- 3rd-Party packages -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="dist/angular-material-pagination.tpls.js"></script>
+    <!-- catalogo_web app -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/router.js"></script>
+    <script src="app/controllers/main.js"></script>
+    <script src="app/services/demoService.js"></script>
+    <script src="app/controllers/autores.js"></script>
+</body>
+
+</html>

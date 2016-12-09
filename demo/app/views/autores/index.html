@@ -1,0 +1,86 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <md-card ng-controller="AutorCtrl">
+                <md-card-header>
+                    <md-card-avatar>
+                        <img class="md-user-avatar" src="media/img/list/60.jpeg" />
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-headline">Autors</span>
+                        <span class="md-subhead">Trabajar con autores</span>
+                    </md-card-header-text>
+                </md-card-header>
+                <md-divider></md-divider>
+                <md-card-actions layout="row" layout-align="start center">
+                            <md-button class="md-icon-button" aria-label="Add" ui-sref="catalogo.catalogo.autoresNew">
+                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
+                            </md-button>
+                            <md-card-icon-actions>
+                                <md-input-container class="md-block md-search">
+                                    <input placeholder="Buscar" ng-model="query" ng-keyup="buscar()">
+                                </md-input-container>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <ng-md-icon icon="more_vert" aria-label="title"></ng-md-icon>
+                                </md-button>
+                            </md-card-icon-actions>
+                        </md-card-actions>
+                        
+                <md-card-content>
+               
+                <md-progress-circular md-mode="indeterminate" ng-show="isLoading"></md-progress-circular>
+  
+
+                    
+                    <table table-responsive class="table-pagination">
+                        
+                        
+                        <thead md-on-reorder="onReorder">
+                            <tr>
+                                <th>#</th>
+                                <th class="col-hidden" data-order="nombre">nombre</th>
+                                <th class="col-hidden" data-order="codigo">direccion</th>
+                                <th>fecha_nac</th>
+                                <th>updated_at</th>
+                                <th colspan="2" class="align-options">acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in lista">
+                                <td> {{ (options.page - 1) * options.page_size +$index +1 }} </td>
+                                <td> {{ d.nombre }} </td>
+                                <td> {{ d.direccion }} </td>
+                                <td> {{ d.fecha_nac | date:'shortDate' }} </td>
+                                <td> {{ d.updated_at | date:'shortDate' }} </td>
+                                <td>
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="catalogo.catalogo.autoresEdit({id:d.id})">
+                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                                <td>
+                                    <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
+                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+
+
+               
+
+                    </md-table-container>
+                    <md-table-pagination>
+                        
+                                        <app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
+                                    
+                    </md-table-pagination>
+                </md-card-content>
+            </md-card>
+        </div>
+    </md-content>
+</div>

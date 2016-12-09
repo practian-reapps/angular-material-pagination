@@ -1,0 +1,30 @@
+{
+    "name": "angular-material-pagination",
+    "version": "1.0.0",
+    "description": "Un cliente OAuth2",
+    "main": "gulpfile.js",
+    "dependencies": {
+        "browser-sync": "^2.18.2",
+        "del": "^2.2.2",
+        "gulp": "^3.9.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^2.3.1",
+        "gulp-header": "^1.8.8",
+        "gulp-htmlmin": "^3.0.0",
+        "gulp-imagemin": "^3.1.1",
+        "gulp-jshint": "^2.0.4",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^2.0.0",
+        "jshint": "^2.9.4",
+        "jshint-stylish": "^2.2.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "serve"
+    },
+    "keywords": [
+        "gulp"
+    ],
+    "author": "practian",
+    "license": "ISC"
+}

@@ -1,0 +1,41 @@
+Here
+    <section layout="row"  layout-align="center center" layout-wrap class="pagination">
+        <md-button aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(startParams,startParams.page)">
+            <ng-md-icon icon="first_page" size="24"></ng-md-icon>
+        </md-button>
+        <md-button  aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(prevParams,prevParams.page)">
+            <ng-md-icon icon="navigate_before" size="24"></ng-md-icon>
+        </md-button>
+
+
+        <md-button  aria-label="Settings" ng-show="pagesInRange[0].page != 1" data-ng-click="listpag(firstPageInRange[0].cp,firstPageInRange[0].cp.page)">
+            ...
+        </md-button>
+        <div ng-repeat="p in pagesInRange">
+            <md-button  ng-class="{'md-raised md-primary': p.page == page}" data-ng-click="listpag(p.params,p.page)">
+                {{p.page}}
+            </md-button>
+        </div>
+        <md-button  aria-label="Settings" ng-show="pagesInRange[pagesInRange.length-1].page != pages" data-ng-click="listpag(lastPageInRange[0].cp,lastPageInRange[0].cp.page)">
+            ...
+        </md-button>
+
+        
+        <md-button  aria-label="Settings" data-ng-click="listpag(nextParams,nextParams.page)" ng-disabled="nextParams.page > pages">
+            <ng-md-icon icon="navigate_next" size="24"></ng-md-icon>
+        </md-button>
+        <md-button  aria-label="Settings" data-ng-click="listpag(endParams,endParams.page)" ng-disabled="nextParams.page > pages">
+            <ng-md-icon icon="last_page" size="24"></ng-md-icon>
+        </md-button>
+        
+        <md-select aria-label="items per page" ng-model="per" ng-change="listpag(startParams,startParams.page)"  class="md-table-select">
+
+            <md-option value="0">All</md-option>
+            <md-option value="2">2</md-option>
+            <md-option value="5">5</md-option>
+            <md-option value="20">20</md-option>
+        </md-select> items per page
+        <span flex></span>
+        <span ng-bind="rango"></span>
+
+    </section>

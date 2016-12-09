@@ -1,0 +1,40 @@
+<div ng-cloak>s 
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <md-card ng-controllerx="CategoriaCtrl">
+                <md-card-header>
+                    <md-card-avatar>
+                        <img class="md-user-avatar"  />
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-headline">Headline for title</span>
+                        <span class="md-subhead">subhead</span>
+                    </md-card-header-text>
+                </md-card-header>
+                <md-divider></md-divider>
+                <md-card-actions layout="row" layout-align="start center">
+                            <md-button class="md-icon-button" aria-label="Add" ui-srefx="">
+                                <md-tooltip md-autohide>Add</md-tooltip>
+                                <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
+                            </md-button>
+                            <md-card-icon-actions>
+                                
+                                <md-input-container class="md-block md-search">
+                                    <input placeholder="Buscar" ng-model="query" ng-keyup="buscar()">
+                                </md-input-container>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <ng-md-icon icon="more_vert" aria-label="title"></ng-md-icon>
+                                </md-button>
+      
+
+
+                            </md-card-icon-actions>
+                        </md-card-actions>
+                        <md-divider></md-divider>
+                <md-card-content>
+                My content
+                </md-card-content>
+            </md-card>
+        </div>
+    </md-content>
+</div>
