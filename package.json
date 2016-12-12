@@ -1,7 +1,7 @@
 {
     "name": "angular-material-pagination",
     "version": "1.0.0",
-    "description": "Un cliente OAuth2",
+    "description": "Un angular-material-pagination",
     "main": "gulpfile.js",
     "dependencies": {
         "browser-sync": "^2.18.2",

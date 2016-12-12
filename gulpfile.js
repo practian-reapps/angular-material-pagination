@@ -71,7 +71,7 @@ var browserSync = require('browser-sync'),
 
 gulp.task('serve-browser-sync', function() {
     browserSync({
-        port: 9101,
+        port: 9102,
         host: '127.0.0.1',
         server: {
             baseDir: "./demo/"

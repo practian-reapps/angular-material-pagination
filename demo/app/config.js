@@ -81,6 +81,6 @@ app
 //====================================================
 .run(function($state, $rootScope, $location, $window, userService) {
 
-    userService.userName = 'demo user';
+    userService.userName = 'demo';
 
 });

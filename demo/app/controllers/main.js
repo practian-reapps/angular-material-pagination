@@ -33,7 +33,7 @@ app
 
         //
         $scope.app = {
-            name: 'AMP Demo',
+            name: 'AM-Pag',
             version: '1.0.1',
         };
         // 

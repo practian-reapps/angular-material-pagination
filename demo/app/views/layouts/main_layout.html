@@ -1,4 +1,4 @@
-<div layout="column" class="app" ng-cloak md-theme="{{ dynamicTheme }}">
+<div layout="column" class="app" ng-cloak>
     <section layout="row" flex>
         <div layout="column" tabIndex="-1" role="main" flex>
             <md-toolbar class="md-whiteframe-glow-z1 md-hue-2">
@@ -31,21 +31,9 @@
                     <span flex></span>
 
 
-                    <a ui-sref="home.dashboard">Dashboard</a>&nbsp;|&nbsp;
+                    <a ui-sref="home.dashboard"><h1 ng-show="userService.userName">{{userService.userName}}</h1></a>&nbsp;|&nbsp;
                     <a ui-sref="home.autores">autores</a>&nbsp;
 
-                    <md-icon 
-                aria-hidden="true"
-                md-svg-src="md-toggle-arrow" 
-                style="transform: rotate(-90deg); 
-                -webkit-transform: rotate(-90deg);"></md-icon>
-
-                    <h1 ng-show="userService.userName">{{userService.userName}}</h1>
-                    <md-icon 
-                aria-hidden="true"
-                md-svg-src="md-toggle-arrow" 
-                style="transform: rotate(90deg); 
-                -webkit-transform: rotate(90deg);"></md-icon>
 
                     
                 </div>
