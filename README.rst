@@ -106,7 +106,13 @@ Usage:
     </md-table-pagination>
 
 
-Finally, run ``gulp serve``.
+
+Finally, run:
+
+.. code-block:: bash
+
+    #run
+    $ gulp
 
 
 
